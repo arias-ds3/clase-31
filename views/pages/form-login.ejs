@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+</head>
+
+<body>
+
+    <style>
+        form {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border: 2px #333 solid;
+            border-radius: 12px;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        button{
+            margin-left: 15px;
+        }
+        h2{
+            text-align: left;
+            margin-left: 15px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+
+    <%- include('../partials/header.ejs') %>
+
+        <h1>Formulario Login</h1>
+
+        <form action="/usuarios" method="post" >
+            <h2>Datos de inicio de sesión</h2>
+            <div>
+                <label for="userName">Nombre</label>
+                <input type="text" id="userName" name="userName" required placeholder="Ingresa tu nombre ...">
+            </div>
+            <div>
+                <label for="userPassword">Contraseña</label>
+                <input type="password" id="userPassword" name="userPassword" required placeholder="Ingresa tu contraseña ...">
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+
+        <%- include('../partials/footer.ejs') %>
+
+</body>
+
+</html>
